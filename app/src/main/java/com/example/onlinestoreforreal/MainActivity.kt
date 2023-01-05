@@ -20,6 +20,7 @@ import androidx.navigation.compose.rememberNavController
 
 import com.example.onlinestoreforreal.auth.LoginScreen
 import com.example.onlinestoreforreal.auth.AuthViewModel
+import com.example.onlinestoreforreal.auth.RegisterScreen
 import com.example.onlinestoreforreal.product.ProductScreen
 
 
@@ -33,7 +34,6 @@ class MainActivity : ComponentActivity() {
 
     private val AuthenticationviewModel by viewModels<AuthViewModel>()
 
-    lateinit var navController: NavHostController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,23 +41,23 @@ class MainActivity : ComponentActivity() {
             val snackbarHostState = remember {SnackbarHostState() }
             Scaffold(
                 snackbarHost = { SnackbarHost(snackbarHostState) },
-                content = 
-            ) {
-            }
-            OnlineStoreForRealTheme {
-                setupNavGraph(navController = navController, AuthenticationviewModel)
+                content = {
+                    OnlineStoreForRealTheme {
+                        setupNavGraph(AuthenticationviewModel)
+                    }
                 }
+            )
+
+
             }
         }
     }
 
 @Composable
 fun setupNavGraph(
-    navController: NavHostController = rememberNavController(),
-    viewModel : AuthViewModel
+    viewModel : AuthViewModel,
+    navController: NavHostController = rememberNavController()
 ) {
-
-
     NavHost(navController = navController,
     startDestination = Screens.Login.route
         ){
@@ -65,7 +65,7 @@ fun setupNavGraph(
             LoginScreen(navController, viewModel)
         }
         composable(route = Screens.Signup.route){
-            ProductScreen(navController, viewModel)
+            RegisterScreen(navController, viewModel)
         }
         composable(route = Screens.Products.route){
             ProductScreen(navController, viewModel)

@@ -81,7 +81,7 @@ fun RegisterScreen(navController: NavController, viewModel: AuthViewModel?) {
         ){
             OutlinedTextField(value = email, onValueChange = { email = it },
                 label = {
-                    Text(text = "placeholder@gmail.com")
+                    Text(text = "Email:")
                 },
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth(),
@@ -95,7 +95,7 @@ fun RegisterScreen(navController: NavController, viewModel: AuthViewModel?) {
             )
             OutlinedTextField(value = password, onValueChange = { password = it },
                 label = {
-                    Text(text = "Password: 123456789")
+                    Text(text = "Password:")
                 },
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth(),
@@ -113,14 +113,14 @@ fun RegisterScreen(navController: NavController, viewModel: AuthViewModel?) {
                     enabled = true,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(all = 16.dp),
+                        .padding(all = 10.dp),
                     colors = ButtonDefaults.buttonColors(backgroundColor = Color.White)
                 ) {
                     Text(
                         text = "Register",
                         fontWeight = FontWeight.Bold,
                         color = Color.DarkGray,
-                        fontSize = 16.sp
+                        fontSize = 12.sp
                     )
                 }
             }

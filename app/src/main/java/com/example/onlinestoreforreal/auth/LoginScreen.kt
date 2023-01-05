@@ -42,7 +42,7 @@ fun LoginScreen(navController: NavController, viewModel: AuthViewModel?) {
     var password by remember {
         mutableStateOf("")
     }
-
+/*
     val isEmailValid by derivedStateOf {
         Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
@@ -50,7 +50,7 @@ fun LoginScreen(navController: NavController, viewModel: AuthViewModel?) {
     val isPasswordValid by derivedStateOf {
         password.length > 7
     }
-
+*/
     val focusManager = LocalFocusManager.current
 
     val loginFlow = viewModel?.loginFlow?.collectAsState()
@@ -99,7 +99,7 @@ fun LoginScreen(navController: NavController, viewModel: AuthViewModel?) {
         ){
             OutlinedTextField(value = email, onValueChange = { email = it },
                 label = {
-                    Text(text = "placeholder@gmail.com")
+                    Text(text = "Email:")
                 },
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth(),
@@ -113,7 +113,7 @@ fun LoginScreen(navController: NavController, viewModel: AuthViewModel?) {
             )
             OutlinedTextField(value = password, onValueChange = { password = it },
                 label = {
-                    Text(text = "Password: 123456789")
+                    Text(text = "Password:")
                 },
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth(),
@@ -131,14 +131,14 @@ fun LoginScreen(navController: NavController, viewModel: AuthViewModel?) {
                     enabled = true,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(all = 16.dp),
+                        .padding(all = 10.dp),
                     colors = ButtonDefaults.buttonColors(backgroundColor = Color.White)
                 ) {
                     Text(
                         text = "Register",
                         fontWeight = FontWeight.Bold,
                         color = Color.DarkGray,
-                        fontSize = 16.sp
+                        fontSize = 12.sp
                     )
                 }
             }
@@ -149,13 +149,13 @@ fun LoginScreen(navController: NavController, viewModel: AuthViewModel?) {
                     enabled = true,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(all = 16.dp),
+                        .padding(all = 10.dp),
                     colors = ButtonDefaults.buttonColors(backgroundColor = Color.White)
                 ) {
                     Text(text = "Login",
                         fontWeight = FontWeight.Bold,
                         color = Color.Red,
-                        fontSize = 18.sp
+                        fontSize = 10.sp
                     )
                 }
             }
