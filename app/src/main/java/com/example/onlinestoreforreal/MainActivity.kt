@@ -62,13 +62,13 @@ fun setupNavGraph(
     startDestination = Screens.Login.route
         ){
         composable(route = Screens.Login.route){
-            LoginScreen(navController, viewModel)
+            LoginScreen(navController = navController, viewModel)
         }
         composable(route = Screens.Signup.route){
-            RegisterScreen(navController, viewModel)
+            RegisterScreen(navController = navController, viewModel)
         }
         composable(route = Screens.Products.route){
-            ProductScreen(navController, viewModel)
+            ProductScreen(navController = navController, viewModel)
         }
     }
 }

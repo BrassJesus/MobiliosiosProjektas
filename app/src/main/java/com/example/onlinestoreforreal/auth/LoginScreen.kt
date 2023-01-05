@@ -173,9 +173,10 @@ fun LoginScreen(navController: NavController, viewModel: AuthViewModel?) {
                 CircularProgressIndicator()
             }
             is Resource.Success -> {
-
-                navController.navigate(Screens.Products.route){
-                    popUpTo(Screens.Login.route) { inclusive = true }
+                LaunchedEffect(Unit){
+                    navController.navigate(Screens.Products.route){
+                        popUpTo(Screens.Login.route) { inclusive = true }
+                    }
                 }
             }
         }
