@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "235541976717",
+    "project_id": "katilustore-aa254",
+    "storage_bucket": "katilustore-aa254.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235541976717:android:6e170464022b36667574c4",
+        "android_client_info": {
+          "package_name": "com.example.onlinestoreforreal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "235541976717-9t1jp72r867aljk1gh1r1brlhmm5g405.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAcZTllWBqputkKbulN6K7pjc27NkUpeI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "235541976717-9t1jp72r867aljk1gh1r1brlhmm5g405.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
